@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="350.0" prefWidth="400.0" spacing="15" style="-fx-padding: 20; -fx-background-color: #ffffff;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="client.LoginController">
+    <Label text="Авторизация" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+    <TextField fx:id="usernameField" promptText="Логин" style="-fx-pref-height: 35; -fx-background-color: #f8f8f8; -fx-border-color: #ccc;" />
+    <PasswordField fx:id="passwordField" onKeyPressed="#handleEnterKeyPress" promptText="Пароль" style="-fx-pref-height: 35; -fx-background-color: #f8f8f8; -fx-border-color: #ccc;" />
+    <CheckBox text="Сохранить вход" style="-fx-font-size: 14px;" />
+    <Button text="Авторизоваться" onAction="#handleLogin" style="-fx-font-size: 16px; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-pref-height: 40; -fx-pref-width: 150;" />
+    <Hyperlink text="Регистрация" onAction="#openRegistration" style="-fx-font-size: 14px;" />
+</VBox>
+

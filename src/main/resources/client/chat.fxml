@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Label?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="client.ChatController">
+    <left>
+        <VBox spacing="10" style="-fx-padding: 10; -fx-background-color: #f0f0f0;">
+            <Label text="Список пользователей" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+            <ListView fx:id="userList" prefWidth="150" />
+        </VBox>
+    </left>
+    <center>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <Label fx:id="clientCountLabel" text="Подключено пользователей: 0" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+            <TextArea fx:id="chatArea" editable="false" style="-fx-background-color: #fafafa; -fx-border-color: #ccc;" />
+            <HBox spacing="10">
+                <TextField fx:id="messageField" onKeyPressed="#handleEnterKeyPress" promptText="Введите сообщение..." style="-fx-pref-height: 30;" />
+                <Button onAction="#sendMessage" text="Отправить" style="-fx-font-size: 14px; -fx-background-color: #4CAF50; -fx-text-fill: white;" />
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
+
